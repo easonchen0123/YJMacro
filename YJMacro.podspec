@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YJMacro"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "常用宏定义"
   s.description  = "常用宏定义，简化代码"
   s.homepage     = "https://github.com/easonchen0123/YJMacro"

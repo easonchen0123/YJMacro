@@ -16,6 +16,10 @@
 #define ScreenHeight        [UIScreen mainScreen].bounds.size.height
 //获取设备的物理宽度
 #define ScreenWidth         [UIScreen mainScreen].bounds.size.width
+//iPhoneX, XS, XS Max相关
+#define Is_iPhoneX                              (((int)((ScreenHeight/ScreenWidth)*100) == 216)?YES:NO)
+#define SafeAreaTopHeight                       (Is_iPhoneX ? 88 : 64)
+#define SafeAreaBottomHeight                    (Is_iPhoneX ? 34 : 0)
 //监听键盘的宏定义
 #define _UIKeyboardFrameEndUserInfoKey (&UIKeyboardFrameEndUserInfoKey != NULL ? UIKeyboardFrameEndUserInfoKey : @"UIKeyboardBoundsUserInfoKey")
 //系统版本
@@ -40,7 +44,9 @@
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
-// App版本
+// App信息
+#define APP_NAME			[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 #define APP_VERSION         [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define APP_BUILD_VERSION	[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
 #endif

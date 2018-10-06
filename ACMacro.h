@@ -84,6 +84,7 @@
 #define URL(url) [NSURL URLWithString:url]
 #define string(str1,str2) [NSString stringWithFormat:@"%@%@",str1,str2]
 #define s_str(str1) [NSString stringWithFormat:@"%@",str1]
+#define s_Path(str1,str2) [str1 stringByAppendingPathComponent:str2]
 #define s_Num(num1) [NSString stringWithFormat:@"%d",num1]
 #define s_Integer(num1) [NSString stringWithFormat:@"%ld",num1]
 
